@@ -4,9 +4,21 @@
              xmlns:local="clr-namespace:Cookeet"
              x:Class="Cookeet.MainPage">
 
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <Style x:Name="MasterButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#606878"/>
+                <Setter Property="BorderColor" Value="#606878"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
+    
     <MasterDetailPage.Master>
         <ContentPage>
-            <StackLayout Name="CookeetMaster">
+            <StackLayout x:Name="CookeetMaster" BackgroundColor="#606878">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -22,11 +34,11 @@
                         <Label Text="j"/>
                     </StackLayout>
                 </Grid>
-                <Button Text="Home"/>
-                <Button Text="Recipes"/>
-                <Button Text="Places"/>
-                <Button Text="Settings"/>
-                <Button Text="About"/>
+                <Button Text="Home" Style="{StaticResource CookeetMaster}"/>
+                <Button Text="Recipes" Style="{StaticResource CookeetMaster}"/>
+                <Button Text="Places" Style="{StaticResource CookeetMaster}"/>
+                <Button Text="Settings" Style="{StaticResource CookeetMaster}"/>
+                <Button Text="About" Style="{StaticResource CookeetMaster}"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
