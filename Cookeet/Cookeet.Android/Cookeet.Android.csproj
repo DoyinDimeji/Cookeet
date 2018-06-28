@@ -84,10 +84,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Cookeet\Cookeet.csproj">
-      <Project>{46E88FE0-039D-4CF2-A13D-60F6F965F917}</Project>
+      <Project>{acffd35b-40c5-40c6-ba47-8a756a6e425a}</Project>
       <Name>Cookeet</Name>
     </ProjectReference>
   </ItemGroup>
