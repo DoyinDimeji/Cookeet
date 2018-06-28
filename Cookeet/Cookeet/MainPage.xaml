@@ -6,7 +6,7 @@
 
     <MasterDetailPage.Resources>
         <ResourceDictionary>
-            <Style x:Name="MasterButtons" TargetType="Button">
+            <Style x:Name="MasterButtonsStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#606878"/>
                 <Setter Property="BorderColor" Value="#606878"/>
                 <Setter Property="Margin" Value="0"/>
@@ -18,7 +18,7 @@
     
     <MasterDetailPage.Master>
         <ContentPage>
-            <StackLayout x:Name="CookeetMasterStyle" BackgroundColor="#606878">
+            <StackLayout x:Name="CookeetMaster" BackgroundColor="#606878">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -34,11 +34,11 @@
                         <Label Text="j"/>
                     </StackLayout>
                 </Grid>
-                <Button Text="Home" Style="{StaticResource CookeetMasterStyle}"/>
-                <Button Text="Recipes" Style="{StaticResource CookeetMasterStyle}"/>
-                <Button Text="Places" Style="{StaticResource CookeetMasterStyle}"/>
-                <Button Text="Settings" Style="{StaticResource CookeetMasterStyle}"/>
-                <Button Text="About" Style="{StaticResource CookeetMasterStyle}"/>
+                <Button Text="Home" Style="{StaticResource MasterButtonsStyle}"/>
+                <Button Text="Recipes" Style="{StaticResource MasterButtonsStyle}"/>
+                <Button Text="Places" Style="{StaticResource MasterButtonsStyle}"/>
+                <Button Text="Settings" Style="{StaticResource MasterButtonsStyle}"/>
+                <Button Text="About" Style="{StaticResource MasterButtonsStyle}"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
