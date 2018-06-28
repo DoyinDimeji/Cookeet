@@ -10,8 +10,8 @@
                 <Setter Property="BackgroundColor" Value="#606878"/>
                 <Setter Property="BorderColor" Value="#606878"/>
                 <Setter Property="Margin" Value="0"/>
-                <Setter Property="VerticalOptions" Value="Start"/>
-                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="TextColor" Value="White"/>
             </Style>
         </ResourceDictionary>
@@ -20,7 +20,7 @@
     <MasterDetailPage.Master>
         <ContentPage Title="CookeetMaster">
             <StackLayout BackgroundColor="#606878">
-                <Grid>
+                <Grid Height="150">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="4*"/>
@@ -31,19 +31,31 @@
                     </Grid.RowDefinitions>
                     <Button BackgroundColor="White" BorderColor="White" BorderRadius="10"/>
                     <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-                        <Label Text="Oladimeji Oladoyin"/>
+                        <Label Text="Oladimeji Oladoyin" TextColor="White"/>
                         <Label Text="j" TextColor="Red"/>
                     </StackLayout>
                 </Grid>
                 
-                <StackLayout>
-                    <Button Text="Home" Style="{StaticResource MasterButtonsStyle}"/>
+                <StackLayout Orientation="Horizontal"><!--e10f-->
+                    <Label FontFamily="Segoe MDL2 Assets" VerticalOptions="Center" TextColor="White" FontSize="Medium">&#xEA8A;</Label>
+                    <Button Text="Home" Style="{StaticResource MasterButtonsStyle}" FontFamily="Segoe MDL2 Assets"/>
                 </StackLayout>
-                    
-                <Button Text="Recipes" Style="{StaticResource MasterButtonsStyle}"/>
-                <Button Text="Places" Style="{StaticResource MasterButtonsStyle}"/>
-                <Button Text="Settings" Style="{StaticResource MasterButtonsStyle}"/>
-                <Button Text="About" Style="{StaticResource MasterButtonsStyle}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="Segoe MDL2 Assets" Text="&#xE1EF;" VerticalOptions="Center" TextColor="White"/>
+                    <Button Text="Recipes" Style="{StaticResource MasterButtonsStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="Segoe MDL2 Assets" Text="&#xE7FB;" VerticalOptions="Center" TextColor="White"/> <!--E840-->
+                    <Button Text="Places" Style="{StaticResource MasterButtonsStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="Segoe MDL2 Assets" Text="&#xE115;" VerticalOptions="Center" TextColor="White"/>
+                    <Button Text="Settings" Style="{StaticResource MasterButtonsStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="Segoe MDL2 Assets" Text="&#xE946;" VerticalOptions="Center" TextColor="White"/>
+                    <Button Text="About" Style="{StaticResource MasterButtonsStyle}"/>
+                </StackLayout>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
