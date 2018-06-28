@@ -6,19 +6,20 @@
 
     <MasterDetailPage.Resources>
         <ResourceDictionary>
-            <Style x:Name="MasterButtonsStyle" TargetType="Button">
+            <Style x:Key="MasterButtonsStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#606878"/>
                 <Setter Property="BorderColor" Value="#606878"/>
                 <Setter Property="Margin" Value="0"/>
-                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
             </Style>
         </ResourceDictionary>
     </MasterDetailPage.Resources>
     
     <MasterDetailPage.Master>
-        <ContentPage>
-            <StackLayout x:Name="CookeetMaster" BackgroundColor="#606878">
+        <ContentPage Title="CookeetMaster">
+            <StackLayout BackgroundColor="#606878">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -28,13 +29,17 @@
                         <RowDefinition Height="4*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Image Source=""/>
-                    <StackLayout Grid.Row="1" Grid.RowSpan="2" Orientation="Horizontal">
+                    <Button BackgroundColor="White" BorderColor="White" BorderRadius="10"/>
+                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
                         <Label Text="Oladimeji Oladoyin"/>
-                        <Label Text="j"/>
+                        <Label Text="j" TextColor="Red"/>
                     </StackLayout>
                 </Grid>
-                <Button Text="Home" Style="{StaticResource MasterButtonsStyle}"/>
+                
+                <StackLayout>
+                    <Button Text="Home" Style="{StaticResource MasterButtonsStyle}"/>
+                </StackLayout>
+                    
                 <Button Text="Recipes" Style="{StaticResource MasterButtonsStyle}"/>
                 <Button Text="Places" Style="{StaticResource MasterButtonsStyle}"/>
                 <Button Text="Settings" Style="{StaticResource MasterButtonsStyle}"/>
